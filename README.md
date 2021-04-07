@@ -9,4 +9,4 @@ The only assets not original are the four assetts in the UI folder.
  4. frame.png - the frame of dialogue and menus
 
 Other assets:
- 1. kenko.png - the city skyline was created by Shir Nava (shirnava)
+ 1. kaneko.png - the city skyline was created by Shir Nava (shirnava)
