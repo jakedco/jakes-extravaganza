@@ -425,11 +425,11 @@
                                 "command": "EVENT_MENU",
                                 "args": {
                                     "variable": "L0",
-                                    "items": 3,
+                                    "items": 4,
                                     "option1": "Games",
                                     "option2": "Music",
                                     "option3": "Photos",
-                                    "option4": "",
+                                    "option4": "About",
                                     "option5": "",
                                     "option6": "",
                                     "option7": "",
@@ -447,7 +447,7 @@
                                     "operator": "==",
                                     "comparator": 1,
                                     "__collapseElse": false,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -562,6 +562,41 @@
                                                             ],
                                                             "false": [
                                                                 {
+                                                                    "id": "f3f57023-bdf4-4f69-b67e-7c7d9c69393c",
+                                                                    "command": "EVENT_IF_VALUE",
+                                                                    "args": {
+                                                                        "variable": "L0",
+                                                                        "operator": "==",
+                                                                        "comparator": 4,
+                                                                        "__collapseElse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "id": "4ed5ed21-00b1-448c-b393-3e4fbd22882b",
+                                                                                "command": "EVENT_SWITCH_SCENE",
+                                                                                "args": {
+                                                                                    "sceneId": "c281e1bf-4eaa-4b93-b0fd-ee127d7188a2",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "direction": "",
+                                                                                    "fadeSpeed": "1"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "4f12be77-28e2-4415-b50f-660d72c3719f",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "id": "b4b89098-c3a3-4724-994c-038a8c2a2c1a",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
                                                                     "id": "8f1d6528-87da-4568-b743-d9a999899157",
                                                                     "command": "EVENT_END"
                                                                 }
@@ -611,6 +646,25 @@
             "collisions": [],
             "tileColors": [],
             "script": [
+                {
+                    "id": "c82702e7-d48d-431d-ab5a-3173ebea018e",
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Story",
+                        "option2": "Action",
+                        "option3": "Sci-Fi",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue",
+                        "__collapse": false
+                    }
+                },
                 {
                     "id": "d9103f65-66d5-4b7e-9509-6a018b427c8f",
                     "command": "EVENT_SWITCH_SCENE",
@@ -665,18 +719,18 @@
                     "command": "EVENT_MENU",
                     "args": {
                         "variable": "L0",
-                        "items": 5,
+                        "items": 8,
                         "option1": "Vector",
                         "option2": "Kaneko",
                         "option3": "Prison",
                         "option4": "Sunny",
-                        "option5": "Exit",
+                        "option5": "5",
                         "option6": "6",
                         "option7": "7",
                         "option8": "Exit",
                         "cancelOnB": false,
                         "layout": "dialogue",
-                        "__collapse": true
+                        "__collapse": false
                     }
                 },
                 {
@@ -687,7 +741,7 @@
                         "operator": "==",
                         "comparator": 1,
                         "__collapseElse": false,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -837,10 +891,18 @@
                                                                     "children": {
                                                                         "true": [
                                                                             {
+                                                                                "id": "f073d21a-5f0b-4577-b734-8b485e569d09",
+                                                                                "command": "EVENT_MUSIC_PLAY",
+                                                                                "args": {
+                                                                                    "musicId": "e7c5c331-4abf-4a53-9e8e-772710518606",
+                                                                                    "loop": false
+                                                                                }
+                                                                            },
+                                                                            {
                                                                                 "id": "1ff0b08c-af6e-4d1d-a44a-bf22f8d5fa83",
                                                                                 "command": "EVENT_SWITCH_SCENE",
                                                                                 "args": {
-                                                                                    "sceneId": "133708e3-ede8-4295-869b-c177b4024f51",
+                                                                                    "sceneId": "de422564-0582-4a4c-b4a3-a57a675db429",
                                                                                     "x": 0,
                                                                                     "y": 0,
                                                                                     "direction": "",
@@ -3409,7 +3471,7 @@
         },
         {
             "name": "vector",
-            "backgroundId": "31a859a0-9d29-4e9f-b0ea-db7cdaaead37",
+            "backgroundId": "c0ce004a-6afc-402a-b951-ff5989606afc",
             "width": 20,
             "height": 18,
             "collisions": [],
@@ -3432,7 +3494,7 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "f344c04f-772f-4c4d-85aa-d7eed2cee8f6",
-            "x": 264.8799986140632,
+            "x": 272.95293408855724,
             "y": 597.9949986330113,
             "actors": [],
             "triggers": [],
@@ -3547,6 +3609,415 @@
             "y": 987.67968257507,
             "actors": [],
             "triggers": []
+        },
+        {
+            "name": "hope",
+            "backgroundId": "0e679f78-9fb7-4019-8a5f-255e1f74a0d0",
+            "width": 20,
+            "height": 18,
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "tileColors": [],
+            "script": [
+                {
+                    "id": "191579a6-3418-4090-a466-1c0781572d57",
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$",
+                        "__collapse": true
+                    }
+                },
+                {
+                    "id": "c09d57d2-9920-4528-92b4-924b0e516c43",
+                    "command": "EVENT_END"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "de422564-0582-4a4c-b4a3-a57a675db429",
+            "x": 1088.3105737645121,
+            "y": 592.4124047838378,
+            "actors": [],
+            "triggers": [],
+            "type": "1"
+        },
+        {
+            "name": "About",
+            "backgroundId": "de1609ef-c862-4cf6-91c8-fdde28672e97",
+            "width": 20,
+            "height": 18,
+            "collisions": [],
+            "tileColors": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "c281e1bf-4eaa-4b93-b0fd-ee127d7188a2",
+            "x": 60,
+            "y": 1185.5643216529002,
+            "actors": [],
+            "triggers": []
         }
     ],
     "backgrounds": [
@@ -3559,7 +4030,7 @@
             "imageHeight": 144,
             "filename": "empty.png",
             "inode": "13432365",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "0b3a16a2-620d-45c9-8c14-4356eda21747",
@@ -3570,7 +4041,18 @@
             "imageHeight": 144,
             "filename": "great_escape_scene.png",
             "inode": "13538344",
-            "_v": 1617767625194
+            "_v": 1617796325857
+        },
+        {
+            "id": "0e679f78-9fb7-4019-8a5f-255e1f74a0d0",
+            "name": "hope",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "hope.png",
+            "inode": "13607125",
+            "_v": 1617796325857
         },
         {
             "id": "2ce2105d-3050-4b17-8a26-db0bde79bffd",
@@ -3581,7 +4063,7 @@
             "imageHeight": 144,
             "filename": "kaneko.png",
             "inode": "13535158",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "d33cdccb-caf6-4349-aa1f-ca3e5df20634",
@@ -3592,7 +4074,7 @@
             "imageHeight": 144,
             "filename": "menu_screen_no_title.png",
             "inode": "12864567",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "1623968a-70f3-4918-8f10-2f458e87192f",
@@ -3603,7 +4085,7 @@
             "imageHeight": 144,
             "filename": "menu_screen_title_only.png",
             "inode": "12868020",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "dbc6b888-f40d-453e-8c0d-43c2668cb1ec",
@@ -3614,7 +4096,7 @@
             "imageHeight": 144,
             "filename": "music_main.png",
             "inode": "13534168",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "dfe1af40-01ef-4620-bfa4-c3f8c7089c08",
@@ -3625,7 +4107,7 @@
             "imageHeight": 144,
             "filename": "photo1.png",
             "inode": "13445015",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "46d71429-7d87-4604-a80d-5916e1c2e505",
@@ -3636,7 +4118,7 @@
             "imageHeight": 144,
             "filename": "photo2.png",
             "inode": "13451717",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "826ab73d-a4b3-4ff8-8570-1732e961e95a",
@@ -3647,7 +4129,7 @@
             "imageHeight": 144,
             "filename": "photo3.png",
             "inode": "13463063",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "e187e416-cff1-4dc0-accd-57e5e96da5cc",
@@ -3658,7 +4140,7 @@
             "imageHeight": 144,
             "filename": "photo6.png",
             "inode": "13432893",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "e5dfbb04-9fb2-4769-b9b9-96234da155b3",
@@ -3669,7 +4151,7 @@
             "imageHeight": 144,
             "filename": "photo7.png",
             "inode": "13432976",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "223b0908-eb0f-4cd1-9148-5bbc096e6e2e",
@@ -3680,7 +4162,7 @@
             "imageHeight": 144,
             "filename": "photo8.png",
             "inode": "13432891",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -3691,7 +4173,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "12858627",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "240ffabf-12dc-4798-b945-f3b045313f4e",
@@ -3702,7 +4184,7 @@
             "imageHeight": 144,
             "filename": "prison.png",
             "inode": "13537196",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "647df88d-166b-4738-8e47-ec3fcd6aedd4",
@@ -3713,7 +4195,7 @@
             "imageHeight": 144,
             "filename": "sunny.png",
             "inode": "13577545",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "ed1c15ba-375d-4136-ba22-924f9417af14",
@@ -3724,18 +4206,18 @@
             "imageHeight": 144,
             "filename": "template.png",
             "inode": "13432458",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
-            "id": "31a859a0-9d29-4e9f-b0ea-db7cdaaead37",
+            "id": "c0ce004a-6afc-402a-b951-ff5989606afc",
             "name": "vector",
             "width": 20,
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "vector.png",
-            "inode": "13534808",
-            "_v": 1617767625195
+            "inode": "13602390",
+            "_v": 1617796325858
         }
     ],
     "spriteSheets": [
@@ -3746,7 +4228,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "12844797",
-            "_v": 1617767625195
+            "_v": 1617796325858
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -3755,7 +4237,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "12844799",
-            "_v": 1617767625194
+            "_v": 1617796325858
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -3764,7 +4246,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "12844801",
-            "_v": 1617767625195
+            "_v": 1617796325858
         }
     ],
     "palettes": [
@@ -3930,7 +4412,7 @@
             "filename": "intro.mod",
             "settings": {},
             "inode": "13420592",
-            "_v": 1617767625188
+            "_v": 1617796325855
         },
         {
             "id": "ec8d043e-2ea0-4713-95ec-7c52b3b693b3",
@@ -3938,7 +4420,7 @@
             "filename": "kaneko.mod",
             "settings": {},
             "inode": "13425815",
-            "_v": 1617767625189
+            "_v": 1617796325855
         },
         {
             "id": "4a43243e-e4c6-4da9-b240-41563f0b7deb",
@@ -3946,7 +4428,7 @@
             "filename": "level_music_no_bass.mod",
             "settings": {},
             "inode": "13420594",
-            "_v": 1617767625189
+            "_v": 1617796325855
         },
         {
             "id": "e58e04be-dde7-4c92-8efa-09968fa008c2",
@@ -3954,7 +4436,7 @@
             "filename": "prison.mod",
             "settings": {},
             "inode": "13478708",
-            "_v": 1617767625189
+            "_v": 1617796325855
         },
         {
             "id": "bebb7a84-02f2-4f47-ac82-c105ebb4c1a9",
@@ -3962,7 +4444,7 @@
             "filename": "sunny.mod",
             "settings": {},
             "inode": "13580872",
-            "_v": 1617767625189
+            "_v": 1617796325855
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
@@ -3970,7 +4452,7 @@
             "filename": "template.mod",
             "settings": {},
             "inode": "13182004",
-            "_v": 1617767625189
+            "_v": 1617796325855
         },
         {
             "id": "63903108-2bb0-4320-94be-98d7d6ea6492",
@@ -3978,7 +4460,7 @@
             "filename": "vector.mod",
             "settings": {},
             "inode": "13420596",
-            "_v": 1617767625189
+            "_v": 1617796325856
         }
     ],
     "variables": [
@@ -4033,6 +4515,10 @@
         {
             "id": "b60a06c7-69c3-424d-be56-4af8c7e40760__L0",
             "name": "Music Track"
+        },
+        {
+            "id": "de422564-0582-4a4c-b4a3-a57a675db429__L0",
+            "name": "Music Track"
         }
     ],
     "settings": {
@@ -4041,9 +4527,9 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 61.93533957749605,
+        "worldScrollX": 12,
+        "worldScrollY": 73,
+        "zoom": 58.84751795232296,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
             "default-bg-1",
