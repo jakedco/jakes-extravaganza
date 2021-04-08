@@ -189,20 +189,28 @@ AREA .  .ABS.
 		l__HOME	0252
 		l__GSINIT	0507
 		l__DATA	0E1E
-		l__CODE_9	16D4
-		l__CODE_5	2091
+		l__CODE_5	211E
+		l__CODE_9	2328
+		l__CODE_12	2B9C
+		l__CODE_11	2BBE
 		l__CODE	2C12
 		s__HOME	2E12
+		l__CODE_13	2E18
 		s__BASE	3064
 		s__LIT	3282
 		s__GSINIT	3282
+		l__CODE_10	32BB
 		l__CODE_4	34DF
 		l__CODE_1	35B4
-		l__CODE_7	35F7
 		s__GSINITTAIL	3789
 		s__GSFINAL	378A
-		l__CODE_8	3DF6
-		l__CODE_6	3FF4
+		l__CODE_8	3F1C
+		l__CODE_7	3FF8
+		l__CODE_6	3FFD
+		s__CODE_10	4000
+		s__CODE_11	4000
+		s__CODE_12	4000
+		s__CODE_13	4000
 		s__CODE_1	4000
 		s__CODE_4	4000
 		s__CODE_5	4000
@@ -1019,61 +1027,93 @@ AREA _XSEG
 AREA _CODE_6
 	RADIX HEX
 	BASE 4000
-	SIZE 3FF4
+	SIZE 3FFD
 	ATTRIB REL CON
 	GLOBALS
 		_bank_6_data	4000
 AREA _CODE_7
 	RADIX HEX
 	BASE 4000
-	SIZE 35F7
+	SIZE 3FF8
 	ATTRIB REL CON
 	GLOBALS
 		_bank_7_data	4000
-AREA _CODE_5
-	RADIX HEX
-	BASE 4000
-	SIZE 2091
-	ATTRIB REL CON
-	GLOBALS
-		_tileset_bank_ptrs	4000
-		_background_bank_ptrs	400F
-		_background_attr_bank_ptrs	402A
-		_palette_bank_ptrs	4048
-		_sprite_bank_ptrs	404B
-		_scene_bank_ptrs	404E
-		_collision_bank_ptrs	406C
-		_avatar_bank_ptrs	408A
-		_music_tracks	408D
-		_music_banks	4097
-		_Start_Adventure	409C
-		_Update_Adventure	40B1
-		_Start_Platform	46B1
-		_Update_Platform	477D
-		_Start_PointNClick	535D
-		_Update_PointNClick	5386
-		_Start_Shmup	5641
-		_Update_Shmup	56D1
-		_Start_TopDown	5C73
-		_Update_TopDown	5C88
 AREA _CODE_8
 	RADIX HEX
 	BASE 4000
-	SIZE 3DF6
+	SIZE 3F1C
 	ATTRIB REL CON
 	GLOBALS
 		_bank_8_data	4000
-		_music_track_101__Data	7DE4
-		_music_track_102__Data	7DEA
-		_music_track_103__Data	7DF0
 AREA _CODE_9
 	RADIX HEX
 	BASE 4000
-	SIZE 16D4
+	SIZE 2328
 	ATTRIB REL CON
 	GLOBALS
 		_bank_9_data	4000
-		_music_track_104__Data	56CE
+AREA _CODE_5
+	RADIX HEX
+	BASE 4000
+	SIZE 211E
+	ATTRIB REL CON
+	GLOBALS
+		_tileset_bank_ptrs	4000
+		_background_bank_ptrs	4021
+		_background_attr_bank_ptrs	4051
+		_palette_bank_ptrs	408D
+		_sprite_bank_ptrs	4090
+		_scene_bank_ptrs	4093
+		_collision_bank_ptrs	40CF
+		_avatar_bank_ptrs	410B
+		_music_tracks	410E
+		_music_banks	4120
+		_Start_Adventure	4129
+		_Update_Adventure	413E
+		_Start_Platform	473E
+		_Update_Platform	480A
+		_Start_PointNClick	53EA
+		_Update_PointNClick	5413
+		_Start_Shmup	56CE
+		_Update_Shmup	575E
+		_Start_TopDown	5D00
+		_Update_TopDown	5D15
+AREA _CODE_10
+	RADIX HEX
+	BASE 4000
+	SIZE 32BB
+	ATTRIB REL CON
+	GLOBALS
+		_bank_10_data	4000
+		_music_track_101__Data	72AF
+		_music_track_102__Data	72B5
+AREA _CODE_11
+	RADIX HEX
+	BASE 4000
+	SIZE 2BBE
+	ATTRIB REL CON
+	GLOBALS
+		_bank_11_data	4000
+		_music_track_103__Data	6BB2
+		_music_track_104__Data	6BB8
+AREA _CODE_12
+	RADIX HEX
+	BASE 4000
+	SIZE 2B9C
+	ATTRIB REL CON
+	GLOBALS
+		_bank_12_data	4000
+		_music_track_105__Data	6B90
+		_music_track_106__Data	6B96
+AREA _CODE_13
+	RADIX HEX
+	BASE 4000
+	SIZE 2E18
+	ATTRIB REL CON
+	GLOBALS
+		_bank_13_data	4000
+		_music_track_107__Data	6E0C
+		_music_track_108__Data	6E12
 AREA _SFR0
 	RADIX HEX
 	BASE 0000
@@ -1483,86 +1523,94 @@ MODULES
 		NAME Runtime
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Actor_a.o
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Actor_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfÄÑ`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf∞c`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Actor.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf@å`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfpk`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/asm.macros.o
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/BankData.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf ì`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf0r`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/BankManager.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf‡ñ`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfu`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Camera_a.o
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Camera.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfêõ`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfêz`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Collision.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfÄü`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfÄ~`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Core_Main.o
 		NAME _var_folders_jm_x8mmmlyx6fb118zf
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/DataManager.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf`ø`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf`û`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/FadeManager_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf∆`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf•`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/FadeManager.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf‡…`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf‡®`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/gbt_player_bank1.o
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/gbt_player.o
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Input.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfPŸ`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf0∏`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Math.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf–‹`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf∞ª`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/MusicManager.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf ‰`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Palette.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf0Ë`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf«`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Projectiles_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfÎ`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf– `à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Projectiles.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfÄÔ`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf`Œ`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/ScriptRunner_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf–˙`rî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf∞Ÿ`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/ScriptRunner.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf¿arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf†˝`à
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Scroll_a.o
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Scroll_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf∞%arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfÄaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Scroll.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf
+		NAME _var_folders_jm_x8mmmlyx6fb118zf–aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Sprite_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf -arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Sprite.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf∞0arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfÄaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Stack.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf†2arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfpaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Trigger_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf–4arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf†aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Trigger.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfp7arî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf@aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/UI_b.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfpCarî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf@"aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/UI.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf‡Narî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf∞-aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/bank_6.o
 		NAME bank_6
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/bank_7.o
 		NAME bank_7
+	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/bank_8.o
+		NAME bank_8
+	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/bank_9.o
+		NAME bank_9
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/data_ptrs.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf@Xarî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfp<aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/main.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf¿]arî
-	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/music_bank_8.o
-		NAME music_bank_8
-	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/music_bank_9.o
-		NAME music_bank_9
+		NAME _var_folders_jm_x8mmmlyx6fb118zfAaà
+	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/music_bank_10.o
+		NAME music_bank_10
+	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/music_bank_11.o
+		NAME music_bank_11
+	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/music_bank_12.o
+		NAME music_bank_12
+	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/music_bank_13.o
+		NAME music_bank_13
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Adventure.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf–farî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf–Qaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Platform.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfêiarî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfêTaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/PointNClick.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf0marî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf0Xaà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/Shmup.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zf0parî
+		NAME _var_folders_jm_x8mmmlyx6fb118zf0[aà
 	FILE /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbsbuild/obj/TopDown.o
-		NAME _var_folders_jm_x8mmmlyx6fb118zfêsarî
+		NAME _var_folders_jm_x8mmmlyx6fb118zfê^aà
 LIBRARIES
 	LIBRARY /var/folders/jm/x8mmmlyx6fb118zf_xqbk2th0000gn/T/_gbstools/gbdk/lib/small/asxxxx/gb/gb.lib
 		MODULE sfr.o
